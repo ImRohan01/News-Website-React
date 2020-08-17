@@ -1,38 +1,222 @@
-.App {
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container{
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100%;
+}
+
+.head-sectn{
+  background-color: rgb(193, 243, 228);
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 2rem 0 2rem 0;
+}
+
+.country-head{
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 100%;
+}
+
+.country-head select{
+  float: right;
+  width: 12%;
+}
+.logo-head{
+  /* background: chocolate; */
+  justify-self: stretch;
+  align-self: stretch;
+}
+
+.logo-head > img{
+  width: 70%;
+  height: 70%;
+}
+
+.title-head{
+  /* background: chartreuse; */
+  font-family: 'Merriweather', serif;
+  /* font-family: 'Abril Fatface', cursive; */
+  justify-self: stretch;
+  grid-area: 1/2;
+  font-size: 1.5rem;
+  align-self: stretch;
   text-align: center;
+  opacity: 0.87;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  width: 100%;
+  height: 5vh;
+  padding: 2px 0 2px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button{
+  position: relative;
+  width: 12.5%;
+  height: 100%;
+  background-color: #498df3;
+  border: none;
+  outline: solid cyan 1.7px;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  font-weight: bold;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover{
+  color: #156ae9;
+  background-color: rgb(193, 243, 228);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards {
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  /* background-color: rgb(193, 243, 228); */
+}
+
+.cards-title {
+  display: block;
+  height: 15vh;
+  padding: 0rem 3rem 0rem 3rem;
+  box-shadow:  0px 0px 50px 2px #1b62ce;
+}
+
+.cards-title h1{
+  font-family: 'Merriweather', serif;
+  padding: 1.5rem 0rem 1.5rem 3rem;
+  float: left;
+  opacity: 0.87;
+  font-size: 2rem;
+  text-transform: uppercase;
+  /* border-bottom: 5px solid #498df3; */
+  /* background-color: rgb(193, 243, 228); */
+}
+
+
+.cards-title input{
+  float:right;
+  margin: 1.5rem 0rem 1.5rem 3rem;
+  height: 35px;
+  border: 2px solid black;
+  border-right: none;
+  padding-left: 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.cards-title button{
+  float: right;
+  height: 38px;
+  width: 50px;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+  outline: none;
+  border: 2px solid black;
+  background-color: gray;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.cards-title button:hover {
+  background: black;
+  color: white;
+}
+.card {
+  cursor: pointer;
+  background-color: white;
+  padding: 30px;
+  /* border: 3px solid #498df3; */
+  border-radius: 30px;
+  box-shadow:  0px 0px 10px 2px gray;
+  height: 430px;
+}
+
+.card h1 {
+  font-size: 1rem;
+  font-family: 'Merriweather', serif;
+  background-color: rgb(193, 243, 228);
+  opacity: 0.87;
+  height: 70px;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 30px 30px 0px 0px;
+  transition: transform 0.5s ease;
+}
+
+.card img:hover{
+  opacity: 0.87;
+  transform: rotateY(30deg)
+}
+
+.card button{
+  width:100%;
+  height: 30px;
+  border-radius: 0px 0px 30px 30px;
+  outline: none;
+}
+
+.overlay-card{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  height: 100%;
+  width: 100%;
+  background: rgb(0,0,0,0.5);
+}
+
+.overlay-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 550px;
+  margin: 3rem 30rem 3rem 30rem;
+  padding: 2rem;
+  background-color: rgb(255,255,255);
+  box-shadow:  0px 0px 50px 2px black;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.overlay-back{
+  justify-self: end;
+  height: 25px;
+  width: 75px;
+  margin-bottom: 5px;
+  outline: none;
+  background: white;
+  color: black;
+  opacity: 0.87;
+  cursor: pointer;
+}
+
+.overlay-source{
+  width: 100%;
+  height: 25px;
+  cursor: pointer;
+}
+
+.overlay-container img{
+  width: 100%;
+  height: 220px;
+}
+
+.overlay-container h1{
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+}
+
+.overlay-container p{
+  font-size: 18px;
+  font-weight: bold;
 }
