@@ -12,8 +12,6 @@ function App() {
   const [isLoading,setIsLoading] = useState(true)
   const [country,setCountry] = useState("in")
   const [search,setSearch] = useState("")
-  const API_KEY = "<YOUR API KEY>"
-  const PAGE_SIZE = 30
 
   useEffect(() => {
     //Fetching the data from the API
@@ -21,14 +19,13 @@ function App() {
       let result
       setIsLoading(true)
       if(search !== ""){
-        result = await axios(`https://newsapi.org/v2/everything?apiKey=${API_KEY}&pageSize=${PAGE_SIZE}&q=${search}`)
-
+        result = await axios(`https://rohan-news-server.herokuapp.com/everything/${search}`)
       }
       else if(category === "Top Headlines"){
-        result = await axios(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
+        result = await axios(`https://rohan-news-server.herokuapp.com/top-headlines/${country}`)
       }
       else{
-        result = await axios(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
+        result = await axios(`https://rohan-news-server.herokuapp.com/top-headlines/${country}/${category}`)
       }
       console.log(result.data.articles)
       setItems(result.data.articles.filter((item)=>(item.urlToImage != null && item.content != null)))
@@ -39,7 +36,7 @@ function App() {
 
   return (
     <div className="container">
-      <Header setCountry = {setCountry} />
+      <Header setCountry = {setCountry} setSearch = {setSearch}/>
       <div className="navbar">
         <button onClick = {() => {setCategory("Top Headlines");setSearch("")}}>Top Headlines</button>
         <button onClick = {() => {setCategory("Business");setSearch("")}}>Business</button>
