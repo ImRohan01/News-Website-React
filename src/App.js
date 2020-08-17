@@ -12,7 +12,7 @@ function App() {
   const [isLoading,setIsLoading] = useState(true)
   const [country,setCountry] = useState("in")
   const [search,setSearch] = useState("")
-  const API_KEY = "e916f04904714894a7335e5a06b436da"
+  const API_KEY = "<YOUR API KEY>"
   const PAGE_SIZE = 30
 
   useEffect(() => {
