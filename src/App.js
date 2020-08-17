@@ -21,11 +21,11 @@ function App() {
       let result
       setIsLoading(true)
       if(search !== ""){
-        result = await axios(`//newsapi.org/v2/everything?apiKey=${API_KEY}&pageSize=${PAGE_SIZE}&q=${search}`)
+        result = await axios(`http://newsapi.org/v2/everything?apiKey=${API_KEY}&pageSize=${PAGE_SIZE}&q=${search}`)
 
       }
       else if(category === "Top Headlines"){
-        result = await axios(`//newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
+        result = await axios(`http://newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
       }
       else{
         result = await axios(`//newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
