@@ -28,7 +28,7 @@ function App() {
         result = await axios(`http://newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
       }
       else{
-        result = await axios(`//newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
+        result = await axios(`http//newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${API_KEY}&pageSize=${PAGE_SIZE}`)
       }
       console.log(result.data.articles)
       setItems(result.data.articles.filter((item)=>(item.urlToImage != null && item.content != null)))
