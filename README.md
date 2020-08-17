@@ -1,3 +1,8 @@
+Checkout the webste here:
+<br/>
+https://imrohan01.github.io/News-Website-React/
+<br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
