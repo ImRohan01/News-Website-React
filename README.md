@@ -1,4 +1,4 @@
-Checkout the webste here:
+Checkout this amazing website for the latest news here:
 <br/>
 https://imrohan01.github.io/News-Website-React/
 <br/>
