@@ -3,7 +3,7 @@ Checkout this amazing website for the latest news here:
 https://imrohan01.github.io/News-Website-React/
 <br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with in React App(https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
