@@ -3,7 +3,7 @@ import React from 'react'
 function Header({setCountry,setSearch}) {
     return (
         <div className="head-sectn">
-            <div className="title-head"><h1>THE POPULAR TIMES</h1></div>
+            <div className="title-head"><h1>The Popular Times</h1></div>
             <div className="country-head">
                 <select>                 
                     <option onClick = {() => {setCountry("in");setSearch("")}}>--Select Country--</option>

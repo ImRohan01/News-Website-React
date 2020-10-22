@@ -18,13 +18,21 @@ function OverlayNewsItem({item, style, setOverlay}) {
     return (
         <div className="overlay-card" style={style}>
             <div className = "overlay-container">
-                <button className="overlay-back" onClick = {()=>{setOverlay(false)}}>Back &gt;&gt;</button>
-                <img src = {item.urlToImage} alt=""/>
-                <h1>{item.title}</h1>
-                <p style={{fontFamily: "'Merriweather', serif"}}>{dateConvertor(item.publishedAt)}</p>
-                <p style={{fontFamily: "'Merriweather', serif"}}>{item.author}</p>
-                <p>{splitContent(item.content)}</p>
-                <a href={item.url}><button className="overlay-source">Click here to read more...</button></a>
+                <div className="overlay-back">
+                    <button  onClick = {()=>{setOverlay(false)}}>Back &gt;&gt;</button>
+                </div>
+                <div className = "hzntal">
+                    <div className = "h-image">
+                        <img src = {item.urlToImage} alt=""/>
+                    </div>
+                    <div className = "vrtcal">
+                        <h1>{item.title}</h1>
+                        <p id = "p1">{dateConvertor(item.publishedAt)}</p>
+                        <p id = "p2">{item.author}</p>
+                        <p id = "p3">{splitContent(item.content)}</p>
+                        <div className="overlay-source"><a href={item.url}><button >Click here to read more...</button></a></div>
+                    </div>
+                </div>
             </div>
         </div>
     )

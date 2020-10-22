@@ -12,12 +12,13 @@ function Body({items,isLoading,category,search,setSearch}){
     <div>
         <div className="cards-title">
             <h1>{search === "" ? category: "Search: \"" + search + "\""}</h1>
-            <button type="submit" onClick = {()=>{setSearch(text);setText("")}}>GO</button>
+            <form>
             <input placeholder="Search"
                    type = "text"
                    value = {text}
-                   onChange={(e)=>{setText(e.target.value)}}
-            ></input>
+                   onChange={(e)=>{setText(e.target.value)}}/>
+            <button type="submit" onClick = {()=>{setSearch(text);setText("")}}>GO</button>
+            </form>
         </div>
         <div className="cards">
             {items.map((item)=>(
