@@ -36,7 +36,9 @@ function App() {
 
   return (
     <div className="container">
-      <Header setCountry = {setCountry} setSearch = {setSearch}/>
+      <div>
+        <Header setCountry = {setCountry} setSearch = {setSearch}/>
+      </div>
       <div className="navbar">
         <button onClick = {() => {setCategory("Top Headlines");setSearch("")}}>Top Headlines</button>
         <button onClick = {() => {setCategory("Business");setSearch("")}}>Business</button>
@@ -47,7 +49,9 @@ function App() {
         <button onClick = {() => {setCategory("Science");setSearch("")}}>Science</button>
         <button onClick = {() => {setCategory("General");setSearch("")}}>General</button>
       </div>
-      <Body isLoading = {isLoading} items = {items} category = {category} setSearch = {setSearch} search={search}/>
+      <div>
+        <Body isLoading = {isLoading} items = {items} category = {category} setSearch = {setSearch} search={search}/>
+      </div>
       <Footer />
     </div>
   );

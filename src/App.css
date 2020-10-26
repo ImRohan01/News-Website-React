@@ -1,6 +1,7 @@
 * {
   padding: 0px;
   margin: 0px;
+
 }
 
 @font-face {
@@ -9,10 +10,12 @@
 }
 
 body{
-  background-color: rgb(136, 136, 136);
+  background-color: rgb(122, 122, 122);
 }
 
 .container{
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -48,22 +51,21 @@ body{
 .navbar{
   display: flex;
   width: 100%;
-  height: 5vh;
   padding: 2px 0 2px 0;
   flex-wrap: wrap;
 }
 
 button{
-  position: relative;
   flex: 10%;
   height: 100%;
-  background-color: #494949;
+  background-color: rgb(84, 230, 84);
   border: none;
-  outline: solid rgb(122, 122, 122) 2px;
+  outline: solid rgb(0, 255, 0) 2px;
   font-family: 'Ubuntu', serif;
   font-size: 16px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
+  padding: 7px;
 }
 
 button:hover{
@@ -82,21 +84,29 @@ button:hover{
 .cards-title {
   display: flex;
   flex-direction: row;
-  padding: 5vh 5vw 5vh 5vw;
+  padding: 6vh 7vw 6vh 7vw;
   background-color: rgb(48, 48, 48);
-  box-shadow:  0px 0px 10px 5px rgb(131, 131, 131);
+  /* box-shadow:  0px 0px 10px 5px rgb(131, 131, 131); */
+  justify-content: center;
+  align-items: center;
 }
 
 .cards-title h1{
   font-family: 'Rye', cursive;
   color: white;
-  font-size: 32px;
+  font-size: 28px;
   text-transform: uppercase;
-  flex: 50%;
+}
+
+.cards-title form {
+  margin-left :auto;
 }
 
 .cards-title form input{
   padding-left: 10px;
+  height: 5vh;
+  outline: none;
+  border: none;
 }
 
 .cards-title form button{
@@ -106,6 +116,7 @@ button:hover{
   outline: none;
   margin-left: 5px;
   background-color: gray;
+  height: 5vh;
 }
 
 .cards-title button:hover {
@@ -115,11 +126,11 @@ button:hover{
 
 .card {
   cursor: pointer;
-  background-color: rgb(255,255,255, 0.2);
+  background-color: rgb(255, 255, 255);
   padding: 30px;
   border-radius: 30px;
-  box-shadow:  0px 0px 10px 2px rgb(80, 79, 79);
-  height: 450px;
+  box-shadow:  0px 0px 10px 2px  rgb(51, 51, 51);
+  height: 350px;
 }
 
 .card-image {
@@ -138,10 +149,10 @@ button:hover{
 
 .card-image h1 {
   position: absolute;
-  font-size: 20px;
+  font-size: 16px;
   background-color: rgb(0,0,0,0.7);
   color: white;
-  font-family: 'Neucha',cursive;
+  font-family: 'Rye',cursive;
   padding: 15px;
   right: 0px;
   left: 0px;
@@ -160,9 +171,9 @@ button:hover{
   left: 0px;
   width:100%;
   height: 30px;
-  font-family: 'Neucha',cursive;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  font-family: 'Ubuntu',cursive;
+  background-color:rgb(64, 228, 64);
+  color: rgb(0, 0, 0);
   border-radius: 0px 0px 30px 30px;
   outline: none;
 }
@@ -178,7 +189,6 @@ button:hover{
   left: 0px;
   min-height: 100vh;
   background: rgb(0,0,0,0.5);
-  font-family: 'Neucha',cursive;
 }
 
 .overlay-container{
@@ -186,11 +196,10 @@ button:hover{
   flex-direction: column;
   padding: 30px;
   padding-bottom: 50px;
-  height: 550px;
   margin: 10vh 20vw 10vh 20vw;
   background-color: rgb(255,255,255);
   box-shadow:  0px 0px 50px 2px rgb(124, 119, 119);
-  font-family: 'Neucha',cursive;
+  font-family: 'Merriweather',cursive;
 }
 
 .overlay-back{
@@ -205,7 +214,7 @@ button:hover{
    cursor: pointer;
    color: black;
    outline: none;
-   font-family: 'Neucha',cursive;
+   font-family: 'Merriweather',cursive;
    font-size: 18px;
    transition: font-size ease 0.2s;
 }
@@ -276,7 +285,8 @@ button:hover{
 @media (max-width: 1000px) {
   button{
     flex: 25%;
-    font-size:16px;
+    font-size:14px;
+    outline: solid rgb(122, 122, 122) 1px;
   }
 
   .title-head{
@@ -286,10 +296,6 @@ button:hover{
   .country-head select{
     width: 100px;
     font-size: 8px;
-  }
-
-  .cards-title { 
-    height: 10vh;
   }
 
   .cards-title h1{
@@ -347,19 +353,19 @@ button:hover{
 
   .vrtcal h1{
     padding-top: 10px;
-    font-size: 2.8vh;
+    font-size: 32px;
     font-family: 'Merriweather',cursive;
   }
   
   #p1{
-    font-size: 2vh;
+    font-size: 18px;
     font-weight: bold;
     padding-top: 20px;
     font-family: 'Helvetica',cursive;
   }
   
   #p2{
-    font-size: 2vh;
+    font-size: 18px;
     font-weight: bold;
     padding-top: 5px;
     font-family: 'Helvetica',cursive;
@@ -367,7 +373,7 @@ button:hover{
   
   #p3{
     padding: 10px 0px 10px 0px;
-    font-size: 2.5vh;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'Ubuntu',cursive;
   }
@@ -375,6 +381,12 @@ button:hover{
 }
 
 @media (max-width: 800px){
+  button{
+    flex: 40%;
+    font-size: 12px;
+    outline: solid rgb(122, 122, 122) 0.5px;
+  }
+
   .cards {
     display: grid;
     padding: 3rem;
