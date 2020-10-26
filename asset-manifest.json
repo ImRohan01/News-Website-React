@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/News-Website-React/static/css/main.2144a861.chunk.css",
+    "main.css": "/News-Website-React/static/css/main.f590deb9.chunk.css",
     "main.js": "/News-Website-React/static/js/main.e42f65fa.chunk.js",
     "main.js.map": "/News-Website-React/static/js/main.e42f65fa.chunk.js.map",
     "runtime-main.js": "/News-Website-React/static/js/runtime-main.710b589f.js",
@@ -8,9 +8,9 @@
     "static/js/2.604806cc.chunk.js": "/News-Website-React/static/js/2.604806cc.chunk.js",
     "static/js/2.604806cc.chunk.js.map": "/News-Website-React/static/js/2.604806cc.chunk.js.map",
     "index.html": "/News-Website-React/index.html",
-    "precache-manifest.0195ff63e8c38f6f90652d648a189e92.js": "/News-Website-React/precache-manifest.0195ff63e8c38f6f90652d648a189e92.js",
+    "precache-manifest.b00d08975d1939c50707e3236bc7a280.js": "/News-Website-React/precache-manifest.b00d08975d1939c50707e3236bc7a280.js",
     "service-worker.js": "/News-Website-React/service-worker.js",
-    "static/css/main.2144a861.chunk.css.map": "/News-Website-React/static/css/main.2144a861.chunk.css.map",
+    "static/css/main.f590deb9.chunk.css.map": "/News-Website-React/static/css/main.f590deb9.chunk.css.map",
     "static/js/2.604806cc.chunk.js.LICENSE.txt": "/News-Website-React/static/js/2.604806cc.chunk.js.LICENSE.txt",
     "static/media/App.css": "/News-Website-React/static/media/Chomsky.b5fc230a.otf",
     "static/media/spinner.gif": "/News-Website-React/static/media/spinner.235b9b3e.gif"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.710b589f.js",
     "static/js/2.604806cc.chunk.js",
-    "static/css/main.2144a861.chunk.css",
+    "static/css/main.f590deb9.chunk.css",
     "static/js/main.e42f65fa.chunk.js"
   ]
 }
